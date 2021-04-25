@@ -1,0 +1,153 @@
+/* Images and Music created by: Beat Gates at "https://soundcloud.com/beat-gates" */
+/* Music Record icon icon by Icons8 */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: spartan, sans-serif;
+  color:rgb(252, 252, 252);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #c5c0cd, #a791b3, #4a395e, #1b171d);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.player-container {
+  height: 590px;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+  height: 220px;
+  width: 220px;
+  padding: 50px 60px 40px;
+  position: relative;
+  top: -0px;
+  left: 30px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#title {
+  font-size: 20px;
+  text-align: center;
+  margin: 5px 10px;
+  padding: 5px 20px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0px;
+}
+
+/* Progress */
+.progress-container {
+  background: rgb(252, 252, 252);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 30px;
+  height: 4px;
+  width: 85%;
+}
+
+.progress {
+  background: #ff4284;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -25px;
+}
+
+/* Controls */
+.player-controls {
+  width: 200px;
+  position: relative;
+  top: -15px;
+  left: 120px;
+}
+
+.fas {
+  font-size: 35px;
+  color:rgb(252, 252, 252);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  filter: brightness(90%);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-container{
+    width: 330px;
+    height: 550px;
+  }
+
+  .img-container {
+    height: 180px;
+    width: 180px;
+    padding: 30px 26px 15px;
+    margin: 20px 20px 5px;
+    position: relative;
+    top: -0px;
+    left: 30px;
+  }
+
+  #title {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
